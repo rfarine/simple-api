@@ -3,13 +3,28 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "callApi": "node callApi.js",
+    "migrate:up": "node_modules/.bin/sequelize db:migrate",
+    "migrate:down": "node_modules/.bin/sequelize db:migrate:undo",
+    "start": "nodemon app.js"
   },
   "dependencies": {
+    "axios": "^0.20.0",
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-fileupload": "^1.2.0",
+    "form-data": "^3.0.0",
+    "fs": "^0.0.1-security",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5",
+    "sequelize-cli": "^6.2.0"
   }
 }
