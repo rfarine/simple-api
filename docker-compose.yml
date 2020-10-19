@@ -1,0 +1,12 @@
+version: '2'
+services:
+  simple-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: simple-api
+    container_name: simple-api
+    restart: always
+    ports:
+      - "3000:3000"
+    command: yarn start

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const chalk = require('chalk');
 const commandLineArgs = require('command-line-args');
 const commandLineUsage = require('command-line-usage');
 const { create, read, update, del, all } = require('./crud');
